@@ -8,7 +8,7 @@ describe('Modificacion', () => {
     describe('FilterMapAddReduce', () => {
         const processor = new FilterMapAddReduce();
 
-        it('should correctly reduce numbers after filtering and mapping with addition', () => {
+        it('da la lista de todos los números sumados', () => {
             let result = processor.reduce(numbers);
             expect(result).to.equal(15);
         });
@@ -16,7 +16,7 @@ describe('Modificacion', () => {
     describe('FilterMapDivREduce', () => {
         const processor = new FilterMapDivReduce();
 
-        it('should correctly reduce numbers after filtering and mapping with addition', () => {
+        it('da la lista de todos los números divididos', () => {
             let result = processor.reduce(numbers);
             expect(result).to.equal(0);
         });
@@ -24,7 +24,7 @@ describe('Modificacion', () => {
     describe('FilterMapSubReduce', () => {
         const processor = new FilterMapSubReduce();
 
-        it('should correctly reduce numbers after filtering and mapping with addition', () => {
+        it('da la lista de todos los números restados', () => {
             let result = processor.reduce(numbers);
             expect(result).to.equal(-15);
         });
@@ -32,7 +32,7 @@ describe('Modificacion', () => {
     describe('run con addreduce', () => {
         const processor = new FilterMapAddReduce();
 
-        it('should correctly reduce numbers after filtering and mapping with addition', () => {
+        it('filtrar pares y multiplicarlos por 2', () => {
             //filtramos por pares y los multiplicamos x 2
             let result = processor.run(numbers, num => num % 2 === 0, num => num * 2);
             expect(result).to.equal(12);
