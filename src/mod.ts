@@ -24,11 +24,11 @@ export abstract class FilterMap {
     *Operación map sobre la lista de números resultante de la operación de filtrado (sin hacer uso del propio método map proporcionado por TypeScript). En este caso, de un modo similar a la operación filter, la operación map recibe también una función como argumento que permite transformar cada elemento de la lista de entrada aplicándole dicha función.
     */
     map(n: number[], predicate: (num: number) => number): number[] {
-        const transformedNumbers: number[] = [];
+        const mappedNumbers: number[] = [];
         for (const num of n) {
-            transformedNumbers.push(predicate(num));
+            mappedNumbers.push(predicate(num));
         }
-        return transformedNumbers;
+        return mappedNumbers;
     }
     // Método run para realizar cada una de las operaciones
     run(n: number[], predicate: (num: number) => boolean, predicate2: (num: number) => number): number {
